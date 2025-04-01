@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 export default function Header() {
   return (
     <header className="border-border/40 bg-background/90 sticky top-0 z-50 w-full border-b backdrop-blur-sm">
-      <div className="container flex h-16 items-center">
+      <div className="container mx-auto flex h-16 items-center">
         <Link href="/" className="text-2xl font-bold">
           <span className="text-primary">Dev</span>Portfolio
         </Link>

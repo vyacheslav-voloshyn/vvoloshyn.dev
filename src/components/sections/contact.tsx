@@ -1,8 +1,8 @@
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-16 md:py-24 bg-secondary/30">
+    <section id="contact" className="bg-secondary/30 py-16 md:py-24">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center gap-4 text-center">
           <div className="space-y-2">
@@ -44,7 +44,7 @@ export default function ContactSection() {
                 className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                 id="message"
                 placeholder="Your message"
-               />
+              />
             </div>
             <Button type="submit" variant="primary">
               Send Message
@@ -54,4 +54,4 @@ export default function ContactSection() {
       </div>
     </section>
   );
-} 
+}

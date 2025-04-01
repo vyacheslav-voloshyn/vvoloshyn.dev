@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function AboutSection() {
   return (
@@ -19,8 +19,8 @@ export default function AboutSection() {
             </CardHeader>
             <CardContent>
               <p>
-                I&apos;m a full stack developer with over 5 years of experience building web applications. 
-                I specialize in React, TypeScript, and modern backend technologies.
+                I&apos;m a full stack developer with over 5 years of experience building web
+                applications. I specialize in React, TypeScript, and modern backend technologies.
               </p>
             </CardContent>
           </Card>
@@ -30,8 +30,8 @@ export default function AboutSection() {
             </CardHeader>
             <CardContent>
               <p>
-                I believe in writing clean, maintainable code and applying best practices. 
-                My focus is on creating responsive, accessible, and performant applications.
+                I believe in writing clean, maintainable code and applying best practices. My focus
+                is on creating responsive, accessible, and performant applications.
               </p>
             </CardContent>
           </Card>
@@ -41,8 +41,8 @@ export default function AboutSection() {
             </CardHeader>
             <CardContent>
               <p>
-                I&apos;m passionate about continuous learning and staying up-to-date with the latest technologies. 
-                I enjoy solving complex problems and creating elegant solutions.
+                I&apos;m passionate about continuous learning and staying up-to-date with the latest
+                technologies. I enjoy solving complex problems and creating elegant solutions.
               </p>
             </CardContent>
           </Card>
@@ -50,4 +50,4 @@ export default function AboutSection() {
       </div>
     </section>
   );
-} 
+}

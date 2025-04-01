@@ -1,6 +1,6 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 
 export default function HeroSection() {
   return (
@@ -12,7 +12,8 @@ export default function HeroSection() {
               <span className="text-primary">Full Stack</span> Developer
             </h1>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-              Building beautiful, functional, and responsive web applications with modern technologies.
+              Building beautiful, functional, and responsive web applications with modern
+              technologies.
             </p>
           </div>
           <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -31,4 +32,4 @@ export default function HeroSection() {
       </div>
     </section>
   );
-} 
+}

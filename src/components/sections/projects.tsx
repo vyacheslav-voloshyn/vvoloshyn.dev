@@ -1,33 +1,43 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from '@/components/ui/card';
 
 export default function ProjectsSection() {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-featured online store with payment processing, user authentication, and inventory management.",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      link: "#",
-      github: "#",
+      title: 'E-Commerce Platform',
+      description:
+        'A full-featured online store with payment processing, user authentication, and inventory management.',
+      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+      link: '#',
+      github: '#',
     },
     {
-      title: "Dashboard Application",
-      description: "An analytics dashboard with real-time data visualization, user permissions, and reporting features.",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
-      link: "#",
-      github: "#",
+      title: 'Dashboard Application',
+      description:
+        'An analytics dashboard with real-time data visualization, user permissions, and reporting features.',
+      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Supabase'],
+      link: '#',
+      github: '#',
     },
     {
-      title: "Social Network",
-      description: "A community platform with user profiles, messaging, content sharing, and notifications.",
-      technologies: ["React", "GraphQL", "PostgreSQL", "Redis"],
-      link: "#",
-      github: "#",
+      title: 'Social Network',
+      description:
+        'A community platform with user profiles, messaging, content sharing, and notifications.',
+      technologies: ['React', 'GraphQL', 'PostgreSQL', 'Redis'],
+      link: '#',
+      github: '#',
     },
   ];
 
   return (
-    <section id="projects" className="py-16 md:py-24 bg-secondary/30">
+    <section id="projects" className="bg-secondary/30 py-16 md:py-24">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center gap-4 text-center">
           <div className="space-y-2">
@@ -49,7 +59,7 @@ export default function ProjectsSection() {
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="rounded-md bg-primary/10 px-2 py-1 text-xs font-medium text-primary"
+                      className="bg-primary/10 rounded-md px-2 py-1 text-xs font-medium text-primary"
                     >
                       {tech}
                     </span>
@@ -74,4 +84,4 @@ export default function ProjectsSection() {
       </div>
     </section>
   );
-} 
+}

@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 export default function HeroSection() {
   return (
     <section className="py-20 md:py-28">
-      <div className="container px-4 md:px-6">
+      <div className="container mx-auto">
         <div className="flex flex-col items-center gap-4 text-center">
           <div className="space-y-3">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">

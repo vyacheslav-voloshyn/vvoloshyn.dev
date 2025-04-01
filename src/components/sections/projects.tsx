@@ -38,7 +38,7 @@ export default function ProjectsSection() {
 
   return (
     <section id="projects" className="bg-secondary/30 py-16 md:py-24">
-      <div className="container px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center gap-4 text-center">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Projects</h2>

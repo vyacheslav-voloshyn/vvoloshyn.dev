@@ -51,16 +51,23 @@ export default function Navigation() {
         </div>
 
         {isOpen && (
-          <div className="absolute left-0 right-0 top-16 p-4 shadow-lg md:hidden">
-            <div className="flex flex-col space-y-4">
+          <div className="animate-in slide-in-from-top absolute left-0 right-0 top-16 border-t bg-white/90 shadow-lg backdrop-blur-lg duration-200 dark:border-gray-800/50 dark:bg-gray-900/90 md:hidden">
+            <div className="flex flex-col space-y-1 p-6">
               {navItems.map((item) => (
                 <Link
                   key={item.path}
                   href={item.path}
-                  className={`text-sm font-medium ${pathname === item.path ? 'text-blue-500' : ''}`}
+                  className={`relative rounded-lg px-4 py-3 text-sm font-medium transition-all ${
+                    pathname === item.path
+                      ? 'bg-blue-50 text-blue-500 dark:bg-blue-900/20'
+                      : 'text-gray-800 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800/50'
+                  }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
+                  {pathname === item.path && (
+                    <span className="absolute left-0 top-1/2 h-8 w-1 -translate-y-1/2 rounded-full bg-blue-500" />
+                  )}
                 </Link>
               ))}
             </div>

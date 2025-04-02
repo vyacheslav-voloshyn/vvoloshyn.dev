@@ -5,7 +5,6 @@ export async function POST(request: Request) {
   try {
     const { name, email, message } = await request.json();
 
-    // Create a transporter using SMTP
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -14,10 +13,9 @@ export async function POST(request: Request) {
       },
     });
 
-    // Email content
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER, // Send to yourself
+      to: process.env.EMAIL_USER,
       subject: `New Contact Form Submission from ${name}`,
       text: `
         Name: ${name}
@@ -32,7 +30,6 @@ export async function POST(request: Request) {
       `,
     };
 
-    // Send email
     await transporter.sendMail(mailOptions);
 
     return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 });

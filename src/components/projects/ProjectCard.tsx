@@ -6,7 +6,7 @@ import { ProjectCardProps } from './types';
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <div className="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl dark:bg-gray-800">
+    <div className="border-border group relative overflow-hidden rounded-xl border bg-card shadow-lg transition-all duration-300 hover:shadow-2xl">
       <div className="relative h-48 overflow-hidden">
         <Image
           src={project.image}
@@ -18,8 +18,8 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
       </div>
       <div className="p-6">
         <div className="mb-4">
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{project.title}</h3>
-          <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">{project.description}</p>
+          <h3 className="text-xl font-semibold text-foreground">{project.title}</h3>
+          <p className="mt-2 text-sm text-muted-foreground">{project.description}</p>
         </div>
 
         <div className="mb-4 flex flex-wrap gap-2">
@@ -33,7 +33,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
             href={project.demo}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-blue-500 transition-colors hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300"
+            className="inline-flex items-center gap-2 text-primary transition-colors hover:text-primary/80"
           >
             Visit Site
             <BiLinkExternal className="h-4 w-4" />

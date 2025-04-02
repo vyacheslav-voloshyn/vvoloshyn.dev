@@ -42,8 +42,7 @@ export default function ContactForm() {
         message: 'Message sent successfully! I will get back to you soon.',
       });
       e.currentTarget.reset();
-      // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
-    } catch (error) {
+    } catch {
       setSubmitStatus({
         type: 'error',
         message: 'Failed to send message. Please try again later.',
@@ -65,8 +64,8 @@ export default function ContactForm() {
         <div
           className={`rounded-lg p-4 ${
             submitStatus.type === 'success'
-              ? 'bg-green-500/10 text-green-500'
-              : 'bg-red-500/10 text-red-500'
+              ? 'bg-green-500/10 text-green-500 dark:bg-green-500/20'
+              : 'bg-red-500/10 text-red-500 dark:bg-red-500/20'
           }`}
         >
           {submitStatus.message}
@@ -76,10 +75,10 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="group relative w-full overflow-hidden rounded-lg bg-blue-600 px-6 py-3 text-white transition-all hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 disabled:cursor-not-allowed disabled:opacity-50"
+        className="group relative w-full overflow-hidden rounded-lg bg-primary px-6 py-3 text-primary-foreground transition-all hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50"
       >
         <span className="relative z-10">{isSubmitting ? 'Sending...' : 'Send Message'}</span>
-        <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-blue-600 via-blue-700 to-purple-600 transition-transform duration-300 ease-out group-hover:translate-x-0" />
+        <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-primary via-blue-700 to-purple-600 transition-transform duration-300 ease-out group-hover:translate-x-0" />
       </button>
     </form>
   );

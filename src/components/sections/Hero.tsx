@@ -12,17 +12,17 @@ export default function Hero() {
             Hi, I&apos;m Vyacheslav Voloshyn
           </h1>
           <TypewriterText />
-          <p className="text-base text-gray-600 dark:text-gray-300 sm:text-lg">
+          <p className="text-base text-muted-foreground sm:text-lg">
             I build exceptional digital experiences that combine creativity with technical
             expertise. With a passion for both frontend and backend development, I create seamless,
             scalable, and user-friendly applications.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row sm:space-x-4">
-            <Button href="/contact" variant="primary" className="w-full sm:w-auto">
-              Get in Touch
-            </Button>
             <Button href="/projects" variant="secondary" className="w-full sm:w-auto">
               View Projects
+            </Button>
+            <Button href="/contact" variant="primary" className="w-full sm:w-auto">
+              Get in Touch
             </Button>
           </div>
         </div>

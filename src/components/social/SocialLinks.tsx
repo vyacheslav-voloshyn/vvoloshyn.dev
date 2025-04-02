@@ -1,5 +1,5 @@
 import type { IconType } from 'react-icons';
-import { FaGithub, FaLinkedin, FaTelegram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 interface SocialLink {
   name: string;
@@ -17,11 +17,6 @@ const socialLinks: SocialLink[] = [
     name: 'LinkedIn',
     icon: FaLinkedin,
     url: 'https://www.linkedin.com/in/vyacheslav-voloshyn-74ab3b194/',
-  },
-  {
-    name: 'Telegram',
-    icon: FaTelegram,
-    url: 'https://t.me/Amsi_SL',
   },
 ];
 

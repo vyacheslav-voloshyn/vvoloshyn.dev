@@ -26,7 +26,7 @@ export default function Hero() {
             </Button>
           </div>
         </div>
-        <div className="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-2xl md:mx-0">
+        <div className="relative mx-auto aspect-square w-full overflow-hidden rounded-2xl md:mx-0">
           <Image
             src="/profile.jpg"
             alt="Vyacheslav Voloshyn"

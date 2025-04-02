@@ -6,7 +6,7 @@ import { ProjectCardProps } from './types';
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <div className="group relative overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-300 hover:shadow-2xl dark:bg-gray-800">
+    <div className="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl dark:bg-gray-800">
       <div className="relative h-48 overflow-hidden">
         <Image
           src={project.image}

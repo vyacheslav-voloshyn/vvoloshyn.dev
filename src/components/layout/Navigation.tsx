@@ -52,7 +52,7 @@ export default function Navigation() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute left-0 right-0 top-16 bg-white p-4 shadow-lg dark:bg-gray-900 md:hidden"
+            className="absolute left-0 right-0 top-16 p-4 shadow-lg dark:bg-gray-900 md:hidden"
           >
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (

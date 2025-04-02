@@ -33,13 +33,12 @@ interface ExperienceCardProps {
   technologies?: Technology[];
 }
 
-// Map of icon names to their components
 const iconMap: Record<string, IconType> = {
   react: SiReact,
   typescript: SiTypescript,
   nextjs: SiNextdotjs,
   redux: SiRedux,
-  zustand: SiRedux, // Using Redux icon as placeholder
+  zustand: SiRedux,
   tailwind: SiTailwindcss,
   nodejs: SiNodedotjs,
   aws: SiAmazon,
@@ -63,7 +62,7 @@ export default function ExperienceCard({
   technologies = [],
 }: ExperienceCardProps) {
   return (
-    <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-lg transition-all hover:shadow-xl dark:border-gray-700 dark:bg-gray-900 sm:p-6">
+    <div className="rounded-xl border border-gray-100 p-4 shadow-lg transition-all hover:shadow-xl dark:border-gray-700 dark:bg-gray-900 sm:p-6">
       <div className="flex flex-col gap-4 sm:flex-row sm:gap-6">
         <div className="relative h-12 w-12 flex-shrink-0">
           <Image src={logo} alt={company} fill className="rounded-lg object-contain" />

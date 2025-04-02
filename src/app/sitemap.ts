@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://vvoloshyn.dev';
 
-  const routes = ['', '/projects', '/contact'].map((route) => ({
+  const routes = ['', '/experience', '/projects', '/contact'].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,

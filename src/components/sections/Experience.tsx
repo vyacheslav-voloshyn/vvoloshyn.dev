@@ -1,5 +1,4 @@
 import ExperienceCard from '@/components/sections/ExperienceCard';
-import Section from '@/components/ui/Section';
 
 const experiences = [
   {
@@ -55,12 +54,10 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <Section title="Work Experience">
-      <div className="space-y-6 sm:space-y-8">
-        {experiences.map((experience) => (
-          <ExperienceCard key={experience.company} {...experience} />
-        ))}
-      </div>
-    </Section>
+    <div className="space-y-6 sm:space-y-8">
+      {experiences.map((experience) => (
+        <ExperienceCard key={experience.company} {...experience} />
+      ))}
+    </div>
   );
 }

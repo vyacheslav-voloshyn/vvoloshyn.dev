@@ -1,9 +1,11 @@
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
 import Footer from '@/components/Footer';
 import { ThemeProvider } from '@/lib/theme';
+
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -23,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main className="flex-1">{children}</main>
           <Footer />
           <Analytics />
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>

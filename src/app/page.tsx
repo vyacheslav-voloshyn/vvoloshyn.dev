@@ -29,7 +29,7 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col gap-6 pt-4 sm:flex-row">
-              <Button href="/projects" variant="primary" className="group w-full sm:w-auto">
+              <Button href="/projects" variant="secondary" className="group w-full sm:w-auto">
                 View Projects
                 <HiArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>

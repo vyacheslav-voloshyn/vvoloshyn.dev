@@ -1,4 +1,4 @@
-import { ExperienceType } from './Experience';
+import { ExperienceType } from './types';
 
 export default function ExperienceCard({
   company,

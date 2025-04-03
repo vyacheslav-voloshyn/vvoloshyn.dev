@@ -1,15 +1,21 @@
-import sgMail from '@sendgrid/mail';
 import { NextResponse } from 'next/server';
+import nodemailer from 'nodemailer';
 
 export async function POST(request: Request) {
   try {
     const { name, email, message } = await request.json();
 
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_APP_PASSWORD,
+      },
+    });
 
     const adminEmail = {
       to: process.env.ADMIN_EMAIL,
-      from: process.env.VERIFIED_SENDER_EMAIL!,
+      from: process.env.GMAIL_USER,
       subject: `New Contact Form Submission from ${name}`,
       text: `
         Name: ${name}
@@ -26,7 +32,7 @@ export async function POST(request: Request) {
 
     const confirmationEmail = {
       to: email,
-      from: process.env.VERIFIED_SENDER_EMAIL!,
+      from: process.env.GMAIL_USER,
       subject: 'Thank you for contacting us',
       text: `
         Dear ${name},
@@ -34,17 +40,18 @@ export async function POST(request: Request) {
         Thank you for reaching out! We have received your message and will get back to you soon.
         
         Best regards,
-        Your Name
+        Vyacheslav Voloshyn
       `,
       html: `
         <h3>Thank you for contacting us!</h3>
         <p>Dear ${name},</p>
         <p>Thank you for reaching out! We have received your message and will get back to you soon.</p>
-        <p>Best regards,<br>Your Name</p>
+        <p>Best regards,<br>Vyacheslav Voloshyn</p>
       `,
     };
 
-    await sgMail.send([adminEmail, confirmationEmail]);
+    await transporter.sendMail(adminEmail);
+    await transporter.sendMail(confirmationEmail);
 
     return NextResponse.json({ message: 'Emails sent successfully' }, { status: 200 });
   } catch (error) {

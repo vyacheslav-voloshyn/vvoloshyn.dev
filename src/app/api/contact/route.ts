@@ -1,21 +1,15 @@
+import sgMail from '@sendgrid/mail';
 import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
 
 export async function POST(request: Request) {
   try {
     const { name, email, message } = await request.json();
 
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 
-    const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER,
+    const adminEmail = {
+      to: process.env.ADMIN_EMAIL,
+      from: process.env.VERIFIED_SENDER_EMAIL!,
       subject: `New Contact Form Submission from ${name}`,
       text: `
         Name: ${name}
@@ -30,9 +24,29 @@ export async function POST(request: Request) {
       `,
     };
 
-    await transporter.sendMail(mailOptions);
+    const confirmationEmail = {
+      to: email,
+      from: process.env.VERIFIED_SENDER_EMAIL!,
+      subject: 'Thank you for contacting us',
+      text: `
+        Dear ${name},
+        
+        Thank you for reaching out! We have received your message and will get back to you soon.
+        
+        Best regards,
+        Your Name
+      `,
+      html: `
+        <h3>Thank you for contacting us!</h3>
+        <p>Dear ${name},</p>
+        <p>Thank you for reaching out! We have received your message and will get back to you soon.</p>
+        <p>Best regards,<br>Your Name</p>
+      `,
+    };
 
-    return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 });
+    await sgMail.send([adminEmail, confirmationEmail]);
+
+    return NextResponse.json({ message: 'Emails sent successfully' }, { status: 200 });
   } catch (error) {
     console.error('Error sending email:', error);
     return NextResponse.json({ error: 'Failed to send email' }, { status: 500 });

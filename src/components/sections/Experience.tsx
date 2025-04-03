@@ -1,11 +1,25 @@
 import ExperienceCard from '@/components/sections/ExperienceCard';
 
-const experiences = [
+export interface ExperienceType {
+  company: string;
+  position: string;
+  duration: string;
+  location: string;
+  description: string;
+  employmentType?: string;
+  technologies?: Technology[];
+}
+
+interface Technology {
+  name: string;
+  icon: string;
+}
+
+const experiences: ExperienceType[] = [
   {
     company: 'Economia, a.s.',
-    logo: '/economia-logo.png',
     position: 'React + TypeScript Developer',
-    duration: 'Mar 2022 - Present • 3 yrs 2 mos',
+    duration: 'Mar 2022 - Present',
     location: 'Prague, Czech Republic',
     employmentType: 'Full-time',
     description:
@@ -19,13 +33,14 @@ const experiences = [
       { name: 'Tailwind', icon: 'tailwind' },
       { name: 'NodeJS', icon: 'nodejs' },
       { name: 'AWS', icon: 'aws' },
+      { name: 'Docker', icon: 'docker' },
+      { name: 'React Query', icon: 'react-query' },
     ],
   },
   {
     company: 'COOL CREDIT',
-    logo: '/cool-credit-logo.png',
     position: 'PHP/React Developer',
-    duration: 'Jul 2020 - Mar 2022 • 1 yr 9 mos',
+    duration: 'Jul 2020 - Mar 2022',
     location: 'Prague, Czech Republic',
     description:
       'Worked with PHP + Symfony, Doctrine, Webpack, and Twig. Implemented Google API integrations. Developed internal libraries for API communication with banks, SMS gateways, and payment systems.',
@@ -39,9 +54,8 @@ const experiences = [
   },
   {
     company: 'Jumpshot Inc',
-    logo: '/jumpshot-logo.png',
     position: 'Data Analytic',
-    duration: 'Jun 2019 - Jul 2020 • 1 yr 2 mos',
+    duration: 'Jun 2019 - Jul 2020',
     location: 'Prague, Czech Republic',
     description: 'Analyzed user behavior data, compiled reports, and presented analysis results.',
     technologies: [
@@ -54,7 +68,7 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <div className="space-y-6 sm:space-y-8">
+    <div className="mt-12 space-y-12">
       {experiences.map((experience) => (
         <ExperienceCard key={experience.company} {...experience} />
       ))}

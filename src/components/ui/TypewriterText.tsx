@@ -53,14 +53,14 @@ export default function TypewriterText() {
   }, [currentTitleIndex, displayText, isTyping, isComplete]);
 
   return (
-    <div className="h-8">
+    <div>
       <span
-        className={`bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-2xl font-bold text-transparent transition-opacity duration-300 ${
+        className={`text-xl font-medium text-primary transition-opacity duration-300 sm:text-2xl ${
           isVisible ? 'opacity-100' : 'opacity-0'
         }`}
       >
         {displayText}
-        <span className="ml-1 inline-block h-6 w-1 animate-pulse bg-blue-500" />
+        <span className="ml-1 inline-block h-6 w-1 animate-pulse bg-primary" />
       </span>
     </div>
   );

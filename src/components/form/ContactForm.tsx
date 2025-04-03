@@ -41,7 +41,6 @@ export default function ContactForm() {
         type: 'success',
         message: 'Message sent successfully! I will get back to you soon.',
       });
-      e.currentTarget.reset();
     } catch {
       setSubmitStatus({
         type: 'error',
@@ -53,12 +52,18 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mb-12 space-y-8">
-      <FormInput id="name" name="name" label="Name" required />
+    <form onSubmit={handleSubmit} className="space-y-6 py-6">
+      <div className="space-y-2">
+        <FormInput id="name" name="name" label="Name" required />
+      </div>
 
-      <FormInput id="email" name="email" type="email" label="Email" required />
+      <div className="space-y-2">
+        <FormInput id="email" name="email" type="email" label="Email" required />
+      </div>
 
-      <FormTextarea id="message" name="message" label="Message" required />
+      <div className="space-y-2">
+        <FormTextarea id="message" name="message" label="Message" required />
+      </div>
 
       {submitStatus.type && (
         <div
@@ -75,10 +80,9 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="group relative w-full overflow-hidden rounded-lg bg-primary px-6 py-3 text-primary-foreground transition-all hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50"
+        className="inline-flex w-full items-center justify-center rounded-lg px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:ring-offset-2"
       >
-        <span className="relative z-10">{isSubmitting ? 'Sending...' : 'Send Message'}</span>
-        <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-primary via-blue-700 to-purple-600 transition-transform duration-300 ease-out group-hover:translate-x-0" />
+        {isSubmitting ? 'Sending...' : 'Send Message'}
       </button>
     </form>
   );

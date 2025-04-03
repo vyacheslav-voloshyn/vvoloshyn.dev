@@ -60,16 +60,20 @@ export default function Navigation() {
       </nav>
 
       {isOpen && (
-        <div className="fixed inset-0 z-[100] flex flex-col overflow-y-auto bg-white dark:bg-gray-900">
+        <div className="fixed inset-0 z-[100] flex flex-col bg-white dark:bg-gray-900">
           <div className="p-4">
             <div className="flex items-center justify-between">
-              <Link href="/" className="text-xl font-bold" onClick={() => setIsOpen(false)}>
-                <span className="text-primary">V.</span>Voloshyn
+              <Link
+                href="/"
+                className="text-xl font-bold tracking-tight text-white"
+                onClick={() => setIsOpen(false)}
+              >
+                <span className="text-primary">V.</span> Voloshyn
               </Link>
               <button
                 onClick={() => setIsOpen(false)}
                 aria-label="Close menu"
-                className="rounded-full p-1 transition-colors hover:bg-gray-200 dark:hover:bg-gray-800"
+                className="rounded-full bg-white p-1 transition-colors hover:bg-gray-200 dark:hover:bg-gray-800"
               >
                 <HiX className="h-6 w-6" />
               </button>
@@ -78,21 +82,21 @@ export default function Navigation() {
 
           <div className="flex flex-1 flex-col px-4 py-8">
             <div className="flex flex-col space-y-6">
-              {navItems.map((item) => (
-                <Link
-                  key={item.path}
-                  href={item.path}
-                  className={`text-2xl font-medium transition-colors ${
-                    pathname === item.path ? 'text-primary' : 'text-muted-foreground'
-                  }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {navItems.map((item) => {
+                return (
+                  <Link
+                    key={item.path}
+                    href={item.path}
+                    className={`text-2xl font-medium text-gray-900 transition-colors hover:text-primary dark:text-gray-100 dark:hover:text-primary`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                );
+              })}
             </div>
 
-            <div className="mt-auto pt-8">
+            <div className="mt-auto">
               <Link
                 href="/contact"
                 className="block w-full rounded-lg bg-primary px-6 py-3 text-center font-medium text-white transition-colors hover:bg-primary/90"

@@ -65,7 +65,6 @@ body {
   padding-right: 1rem;
 }
 
-/* Custom utility classes */
 .content-box {
   background-color: hsl(var(--card));
   border-radius: var(--radius);

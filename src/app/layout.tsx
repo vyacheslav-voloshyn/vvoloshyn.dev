@@ -2,9 +2,9 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
+import { ThemeProvider } from 'next-themes';
 
 import Footer from '@/components/Footer';
-import { ThemeProvider } from '@/lib/theme';
 
 import './globals.css';
 
@@ -59,7 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body
         className={`${inter.className} flex min-h-screen flex-col bg-gray-50 text-gray-900 transition-colors dark:bg-gray-950 dark:text-gray-100`}
       >
-        <ThemeProvider>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="mx-auto max-w-5xl flex-1 px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
             <div className="content-box flex flex-col">{children}</div>
           </div>

@@ -7,7 +7,6 @@ export function ThemeSwitcher() {
   const { theme, toggleTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  // Prevent hydration mismatch by only rendering after component mounts
   useEffect(() => {
     setMounted(true);
   }, []);

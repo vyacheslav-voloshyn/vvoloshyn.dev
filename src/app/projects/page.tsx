@@ -19,8 +19,8 @@ export default function ProjectsPage() {
               web development.
             </p>
           </div>
-          <ProjectGrid projects={projects} />
         </div>
+        <ProjectGrid projects={projects} />
       </section>
     </>
   );

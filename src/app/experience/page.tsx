@@ -17,10 +17,9 @@ export default function ExperiencePage() {
               achievements.
             </p>
           </div>
-          <Experience />
-
-          <Education />
         </div>
+        <Experience />
+        <Education />
       </section>
     </>
   );

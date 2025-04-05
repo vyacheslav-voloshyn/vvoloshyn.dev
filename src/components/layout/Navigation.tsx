@@ -54,7 +54,7 @@ export default function Navigation() {
                 >
                   {item.name}
                   <span
-                    className={`absolute -bottom-1 left-0 h-0.5 w-0 bg-primary transition-all duration-300 ${
+                    className={`absolute -bottom-1 left-0 h-0.5 w-0 bg-white transition-all duration-300 ${
                       pathname === item.path ? 'w-full' : 'group-hover:w-full'
                     }`}
                   />
@@ -116,7 +116,7 @@ export default function Navigation() {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <HiX className="h-6 w-6" />
+                  <HiX className="h-6 w-6 text-black" />
                 </motion.button>
               </div>
             </div>

@@ -1,3 +1,4 @@
+import { RiReactjsLine } from 'react-icons/ri';
 import {
   SiReact,
   SiNextdotjs,
@@ -12,8 +13,10 @@ import {
   SiVite,
   SiStrapi,
   SiServerless,
+  SiTypescript,
+  SiFirebase,
 } from 'react-icons/si';
-import { TbBrandRust } from 'react-icons/tb';
+import { TbBrandRust, TbLanguage } from 'react-icons/tb';
 
 import { Project, TechIcons } from './types';
 
@@ -35,9 +38,29 @@ export const techIcons: TechIcons = {
   Symphony: SiSymfony,
   Docker: SiDocker,
   Rabbit: SiRabbitmq,
+  TypeScript: SiTypescript,
+  i18n: TbLanguage,
+  Firebase: SiFirebase,
+  'React Hook Form': RiReactjsLine,
 };
 
 export const projects: Project[] = [
+  {
+    title: 'Pulmonology.cz',
+    description:
+      'Specialized pulmonology clinic website offering comprehensive respiratory care services including diagnostics, treatment, and prevention.',
+    technologies: ['Next.js', 'React', 'Tailwind', 'TypeScript', 'i18n'],
+    image: '/projects/pulmonology.png',
+    demo: 'https://pulmonology.cz/cs',
+  },
+  {
+    title: 'MoveCleanMafia.cz',
+    description:
+      'Professional moving and cleaning services platform offering comprehensive packages for relocation and maintenance services.',
+    technologies: ['Next.js', 'React', 'Tailwind', 'TypeScript', 'Firebase', 'React Hook Form'],
+    image: '/projects/movecleanmafia.png',
+    demo: 'https://movecleanmafia.cz/cs',
+  },
   {
     title: 'Pujdu.cz',
     description:

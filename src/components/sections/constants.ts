@@ -2,9 +2,29 @@ import { ExperienceType } from './types';
 
 export const experiences: ExperienceType[] = [
   {
+    company: 'Prusa Research',
+    position: 'Fullstack Developer',
+    duration: 'Jun 2025 - Present',
+    location: 'Prague, Czech Republic',
+    employmentType: 'Full-time',
+    description:
+      'Developing full-stack applications with modern web technologies. Working on both front-end and back-end solutions to deliver scalable and maintainable software.',
+    technologies: [
+      { name: 'React', icon: 'react' },
+      { name: 'TypeScript', icon: 'typescript' },
+      { name: 'NextJS', icon: 'nextjs' },
+      { name: 'NodeJS', icon: 'nodejs' },
+      { name: 'Tailwind', icon: 'tailwind' },
+      { name: 'TanStack', icon: 'tanstack' },
+      { name: 'Shadcn', icon: 'shadcn' },
+      { name: 'Zustand', icon: 'zustand' },
+      { name: 'Docker', icon: 'docker' },
+    ],
+  },
+  {
     company: 'Economia, a.s.',
     position: 'React + TypeScript Developer',
-    duration: 'Mar 2022 - Present',
+    duration: 'Mar 2022 - Jun 2025',
     location: 'Prague, Czech Republic',
     employmentType: 'Full-time',
     description:

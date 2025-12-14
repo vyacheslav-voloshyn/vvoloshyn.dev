@@ -30,7 +30,7 @@ export default function ContactPage() {
               <span className="heading-gradient">Get in Touch</span>
             </motion.h1>
             <motion.p
-              className="max-w-2xl text-lg text-muted-foreground"
+              className="text-muted-foreground max-w-2xl text-lg"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
@@ -52,7 +52,7 @@ export default function ContactPage() {
                 transition={{ duration: 0.5, delay: 0.6 }}
               >
                 <motion.div
-                  className="rounded-full bg-primary/10 p-2 text-primary"
+                  className="bg-primary/10 text-primary rounded-full p-2"
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: 'spring', stiffness: 400, damping: 10 }}
                 >
@@ -89,7 +89,7 @@ export default function ContactPage() {
                 transition={{ duration: 0.5, delay: 0.7 }}
               >
                 <motion.div
-                  className="rounded-full bg-primary/10 p-2 text-primary"
+                  className="bg-primary/10 text-primary rounded-full p-2"
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: 'spring', stiffness: 400, damping: 10 }}
                 >
@@ -117,7 +117,7 @@ export default function ContactPage() {
           </motion.div>
 
           <motion.div
-            className="rounded-lg border border-gray-200 p-6 shadow-sm dark:border-gray-800 sm:p-8"
+            className="rounded-lg border border-gray-200 p-6 shadow-sm sm:p-8 dark:border-gray-800"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{

@@ -57,12 +57,12 @@ export default function TypewriterText() {
   return (
     <div>
       <span
-        className={`text-xl font-medium text-primary transition-opacity duration-300 sm:text-2xl ${
+        className={`text-primary text-xl font-medium transition-opacity duration-300 sm:text-2xl ${
           isVisible ? 'opacity-100' : 'opacity-0'
         }`}
       >
         {displayText}
-        <span className="ml-1 inline-block h-6 w-1 animate-pulse bg-primary" />
+        <span className="bg-primary ml-1 inline-block h-6 w-1 animate-pulse" />
       </span>
     </div>
   );

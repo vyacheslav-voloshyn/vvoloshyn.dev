@@ -23,7 +23,7 @@ export default function Home() {
               <TypewriterText />
             </div>
 
-            <p className="max-w-2xl text-lg text-muted-foreground sm:text-xl">
+            <p className="text-muted-foreground max-w-2xl text-lg sm:text-xl">
               I build exceptional digital experiences that combine creativity with technical
               expertise, focusing on clean code, intuitive interfaces, and scalable solutions.
             </p>
@@ -41,7 +41,7 @@ export default function Home() {
             <div className="flex items-center gap-6 pt-2">
               <Link
                 href="https://github.com/slava-voloshyn"
-                className="text-muted-foreground transition-colors hover:text-foreground"
+                className="text-muted-foreground hover:text-foreground transition-colors"
                 aria-label="GitHub"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -56,7 +56,7 @@ export default function Home() {
               </Link>
               <Link
                 href="https://www.linkedin.com/in/vyacheslav-voloshyn-74ab3b194/"
-                className="text-muted-foreground transition-colors hover:text-foreground"
+                className="text-muted-foreground hover:text-foreground transition-colors"
                 aria-label="LinkedIn"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -68,7 +68,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-xl border border-gray-200 shadow-lg dark:border-gray-800 lg:mx-0 lg:max-w-none">
+          <div className="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-xl border border-gray-200 shadow-lg lg:mx-0 lg:max-w-none dark:border-gray-800">
             <Image
               src="/profile.jpg"
               alt="Vyacheslav Voloshyn"

@@ -31,7 +31,7 @@ export default function ProjectsPage() {
               <span className="heading-gradient">Projects</span>
             </motion.h1>
             <motion.p
-              className="max-w-2xl text-lg text-muted-foreground"
+              className="text-muted-foreground max-w-2xl text-lg"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}

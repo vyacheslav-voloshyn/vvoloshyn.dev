@@ -6,7 +6,7 @@ export const TechnologyBadge = ({ tech }: TechnologyBadgeProps) => {
 
   return (
     <div
-      className="flex items-center gap-1.5 rounded-full bg-secondary px-3 py-1 text-sm text-secondary-foreground transition-colors hover:bg-secondary/80"
+      className="bg-secondary text-secondary-foreground hover:bg-secondary/80 flex items-center gap-1.5 rounded-full px-3 py-1 text-sm transition-colors"
       title={tech}
     >
       {IconComponent && <IconComponent className="h-4 w-4" />}

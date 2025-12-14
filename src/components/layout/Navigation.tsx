@@ -48,7 +48,7 @@ export default function Navigation() {
               >
                 <Link
                   href={item.path}
-                  className={`group relative text-sm font-medium transition-colors hover:text-primary ${
+                  className={`group hover:text-primary relative text-sm font-medium transition-colors ${
                     pathname === item.path ? 'text-primary' : 'text-muted-foreground'
                   }`}
                 >
@@ -133,7 +133,7 @@ export default function Navigation() {
                     >
                       <Link
                         href={item.path}
-                        className={`text-2xl font-medium text-gray-900 transition-colors hover:text-primary dark:text-gray-100 dark:hover:text-primary`}
+                        className={`hover:text-primary dark:hover:text-primary text-2xl font-medium text-gray-900 transition-colors dark:text-gray-100`}
                         onClick={() => setIsOpen(false)}
                       >
                         {item.name}
@@ -151,7 +151,7 @@ export default function Navigation() {
               >
                 <Link
                   href="/contact"
-                  className="block w-full rounded-lg bg-primary px-6 py-3 text-center font-medium text-white transition-colors hover:bg-primary/90"
+                  className="bg-primary hover:bg-primary/90 block w-full rounded-lg px-6 py-3 text-center font-medium text-white transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   Get in Touch

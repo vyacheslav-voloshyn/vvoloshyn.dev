@@ -5,13 +5,13 @@ export default function Footer() {
     <footer className="border-t border-gray-200 py-6 dark:border-gray-800">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-          <div className="text-sm text-muted-foreground">
+          <div className="text-muted-foreground text-sm">
             © {new Date().getFullYear()} Vyacheslav Voloshyn. All rights reserved.
           </div>
           <nav className="flex gap-6">
             <Link
               href="https://github.com/slava-voloshyn"
-              className="text-sm text-muted-foreground transition-colors hover:text-primary"
+              className="text-muted-foreground hover:text-primary text-sm transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -19,7 +19,7 @@ export default function Footer() {
             </Link>
             <Link
               href="https://www.linkedin.com/in/vyacheslav-voloshyn-74ab3b194/"
-              className="text-sm text-muted-foreground transition-colors hover:text-primary"
+              className="text-muted-foreground hover:text-primary text-sm transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -27,7 +27,7 @@ export default function Footer() {
             </Link>
             <Link
               href="mailto:vyacheslav.voloshyn@gmail.com"
-              className="text-sm text-muted-foreground transition-colors hover:text-primary"
+              className="text-muted-foreground hover:text-primary text-sm transition-colors"
             >
               Email
             </Link>

@@ -15,6 +15,10 @@ import {
   SiServerless,
   SiTypescript,
   SiFirebase,
+  SiDrizzle,
+  SiPostgresql,
+  SiTelegram,
+  SiVercel,
 } from 'react-icons/si';
 import { TbBrandRust, TbLanguage } from 'react-icons/tb';
 
@@ -42,9 +46,31 @@ export const techIcons: TechIcons = {
   i18n: TbLanguage,
   Firebase: SiFirebase,
   'React Hook Form': RiReactjsLine,
+  Drizzle: SiDrizzle,
+  PostgreSQL: SiPostgresql,
+  Telegram: SiTelegram,
+  Vercel: SiVercel,
 };
 
 export const projects: Project[] = [
+  {
+    title: 'be-fit-prg.cz',
+    description:
+      'Booking site for a personal trainer in Prague: a free-slot picker, a client area with a lesson balance, Telegram reminders and calendar invites, in Russian and Czech.',
+    technologies: [
+      'TanStack Start',
+      'React',
+      'TypeScript',
+      'Tailwind',
+      'Drizzle',
+      'PostgreSQL',
+      'Telegram',
+      'Vercel',
+      'i18n',
+    ],
+    image: '/projects/be-fit-prg.png',
+    demo: 'https://be-fit-prg.cz/ru',
+  },
   {
     title: 'Pulmonology.cz',
     description:
